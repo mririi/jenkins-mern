@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    ports:
+      - "8081:8081"
+    volumes:
+      - jenkins_data:/var/jenkins_home
+    networks:
+      - ci-network
+
+networks:
+  ci-network:
+
+volumes:
+  jenkins_data:
