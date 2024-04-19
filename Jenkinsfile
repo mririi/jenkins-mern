@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        PATH = "/home/vagrant/.nvm/versions/node/v21.7.3/bin:${env.PATH}"
+        NPM_CONFIG_CACHE = "${WORKSPACE}/.npm"
     }
     stages {
         stage('build') {
